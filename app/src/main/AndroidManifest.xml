@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".view.MainMenuActivity" />
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".view.PresenceMonitoringActivity" />
+        <activity android:name=".view.WaterControlActivity" />
+        <activity android:name=".view.TemperatureMonitoringActivity" />
+        <activity android:name=".view.CreatePlanningActivity" />
+        <activity android:name=".view.PlanningMonitoringActivity"/>
         <activity android:name=".EmailPasswordActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
