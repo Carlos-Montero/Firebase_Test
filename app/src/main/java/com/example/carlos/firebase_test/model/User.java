@@ -8,6 +8,7 @@ package com.example.carlos.firebase_test.model;
  *          User Hardware Serial Number
  */
 
+
 public class User {
 
     private String id;
