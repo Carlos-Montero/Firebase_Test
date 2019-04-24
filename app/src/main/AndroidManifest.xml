@@ -13,11 +13,11 @@
         <activity android:name=".view.LoginActivity" />
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.PresenceMonitoringActivity" />
+        <activity android:name=".EmailPasswordActivity" />
         <activity android:name=".view.WaterControlActivity" />
-        <activity android:name=".view.TemperatureMonitoringActivity" />
         <activity android:name=".view.CreatePlanningActivity" />
         <activity android:name=".view.PlanningMonitoringActivity"/>
-        <activity android:name=".EmailPasswordActivity">
+        <activity android:name=".view.TemperatureMonitoringActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
