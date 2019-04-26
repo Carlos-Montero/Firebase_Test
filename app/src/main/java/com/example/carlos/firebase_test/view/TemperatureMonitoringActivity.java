@@ -36,7 +36,8 @@ public class TemperatureMonitoringActivity extends AppCompatActivity {
 
         //Temperature Listener
         //**************************************************************************************
-        mDatabase.addValueEventListener(new ValueEventListener() {
+
+        ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -52,8 +53,8 @@ public class TemperatureMonitoringActivity extends AppCompatActivity {
                 //Log.w(TAG, "Failed to read value.", error.toException());
             }
 
-        });
-
+        };
+        mDatabase.child("temperature").addValueEventListener(postListener);
         //***************************************************************************************
 
     }
