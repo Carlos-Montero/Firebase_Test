@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.carlos.firebase_test.R;
+import com.example.carlos.firebase_test.viewmodel.TemperatureMonitoringViewmodel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -13,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class TemperatureMonitoringActivity extends AppCompatActivity {
+
 
     // [START declare_database_ref]
     private DatabaseReference mDatabase;

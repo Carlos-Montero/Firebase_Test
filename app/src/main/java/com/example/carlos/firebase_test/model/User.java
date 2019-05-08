@@ -11,24 +11,14 @@ package com.example.carlos.firebase_test.model;
 
 public class User {
 
-    private String id;
     private String mail;
     private String password;
     private String hwserial;
 
-    public User(String id, String mail, String password,String hwserial) {
-        this.id = id;
+    public User(String mail, String password,String hwserial) {
         this.mail = mail;
         this.password = password;
         this.hwserial = hwserial;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getMail() {
