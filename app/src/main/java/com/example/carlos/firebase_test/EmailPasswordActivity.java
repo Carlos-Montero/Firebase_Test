@@ -15,8 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-//QUÉ IMPORT HAY QUE HACER????????
-//*********************import com.google.firebase.quickstart.auth.R;
+//import com.google.firebase.quickstart.auth.R;
 
 
 public class EmailPasswordActivity extends AppCompatActivity implements
