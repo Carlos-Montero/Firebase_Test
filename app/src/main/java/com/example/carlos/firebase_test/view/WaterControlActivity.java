@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.carlos.firebase_test.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class WaterControlActivity extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
     //Buttons
     private Button lessWater;
     private Button moreWater;
@@ -28,6 +30,10 @@ public class WaterControlActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // [END initialize_database_ref]
 
+        //Firebase
+        mAuth=FirebaseAuth.getInstance();
+        String user_id;
+        user_id=mAuth.getUid();
 
         //Buttons
         lessWater = (Button) findViewById(R.id.lessWater);
@@ -38,14 +44,15 @@ public class WaterControlActivity extends AppCompatActivity {
         lessWater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("message").setValue("Less Water");
+
+                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue("Less Water");
             }
         });
 
         moreWater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("message").setValue("More Water");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue("More Water");
             }
         });
 

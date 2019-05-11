@@ -69,7 +69,6 @@ public class EmailPasswordActivity extends AppCompatActivity {
         //Register listener
         emailCreateAccountButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Register button pressed",Toast.LENGTH_SHORT).show();
                 registerUser();
             }
 
@@ -93,6 +92,23 @@ public class EmailPasswordActivity extends AppCompatActivity {
 
         progressDialog.setMessage("Login ...");
         progressDialog.show();
+
+        if(TextUtils.isEmpty(email)){
+
+            Toast.makeText(this,"Please enter email",Toast.LENGTH_SHORT);
+
+            //Stopping the function execution
+            return;
+        }
+
+        if(TextUtils.isEmpty(password)){
+
+
+            //Stopping the function execution
+            return;
+        }
+        Toast.makeText(this,"Please enter password",Toast.LENGTH_SHORT);
+
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -118,7 +134,6 @@ public class EmailPasswordActivity extends AppCompatActivity {
         final String password= mPasswordField.getText().toString().trim();
         final String hardware = "ESP32_0001";
 
-        Toast.makeText(getApplicationContext(), "Inside register user method",Toast.LENGTH_SHORT).show();
 
         if(TextUtils.isEmpty(email)){
 
@@ -224,6 +239,8 @@ public class EmailPasswordActivity extends AppCompatActivity {
             }
         });
 
+        Intent intent =new Intent (getApplicationContext(),MainMenuActivity.class);
+        startActivity(intent);
 
     }
 

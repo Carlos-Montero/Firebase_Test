@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.carlos.firebase_test.R;
 import com.example.carlos.firebase_test.viewmodel.TemperatureMonitoringViewmodel;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class PresenceMonitoringActivity extends AppCompatActivity {
 
-
+    private FirebaseAuth mAuth;
     // [START declare_database_ref]
     private DatabaseReference mDatabase;
     // [END declare_database_ref]
@@ -37,6 +38,10 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presence_monitoring);
 
+        //Firebase
+        mAuth=FirebaseAuth.getInstance();
+        String user_id;
+        user_id=mAuth.getUid();
 
         //Textview
         title = (TextView) findViewById(R.id.title);
@@ -71,7 +76,8 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
             }
 
         };
-        mDatabase.child("upsensor").addValueEventListener(postListener);
+        mDatabase.child("User").child(user_id).child("hardware details").child("Presence").child("up").addValueEventListener(postListener);
+
         //***************************************************************************************
 
         //DownSensor Listener
@@ -95,14 +101,16 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
             }
 
         };
-        mDatabase.child("downsensor").addValueEventListener(postListener2);
+
+
+
+        mDatabase.child("User").child(user_id).child("hardware details").child("Presence").child("down").addValueEventListener(postListener2);
+
         //***************************************************************************************
 
         //TOAST
         if (upsensorvalue=="no" && downsensorvalue=="yes") {
-            System.out.println("caida");
             Toast toast = Toast.makeText(getApplicationContext(), "Caída", Toast.LENGTH_LONG);
-            //toast.setMargin(50, 50);
             toast.show();
         }
         //

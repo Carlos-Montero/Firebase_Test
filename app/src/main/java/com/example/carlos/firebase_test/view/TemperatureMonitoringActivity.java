@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.example.carlos.firebase_test.R;
 import com.example.carlos.firebase_test.viewmodel.TemperatureMonitoringViewmodel;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -15,7 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class TemperatureMonitoringActivity extends AppCompatActivity {
 
-
+    private FirebaseAuth mAuth;
     // [START declare_database_ref]
     private DatabaseReference mDatabase;
     // [END declare_database_ref]
@@ -56,7 +57,12 @@ public class TemperatureMonitoringActivity extends AppCompatActivity {
             }
 
         };
-        mDatabase.child("temperature").addValueEventListener(postListener);
+        //Firebase
+        mAuth=FirebaseAuth.getInstance();
+        String user_id;
+        user_id=mAuth.getUid();
+
+       mDatabase.child("User").child(user_id).child("hardware details").child("Temperature").child("temperature").addValueEventListener(postListener);
         //***************************************************************************************
 
     }
