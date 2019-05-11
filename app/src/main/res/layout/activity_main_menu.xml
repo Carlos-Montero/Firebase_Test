@@ -72,4 +72,19 @@
             android:layout_gravity="center"
             android:text="Planning Monitoring" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_gravity="center"
+            android:text="LogOut" />
+    </LinearLayout>
+
 </LinearLayout>

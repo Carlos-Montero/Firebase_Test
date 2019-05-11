@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.carlos.firebase_test.EmailPasswordActivity;
 import com.example.carlos.firebase_test.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainMenuActivity extends AppCompatActivity {
 
@@ -14,11 +16,18 @@ public class MainMenuActivity extends AppCompatActivity {
     private Button temperature;
     private Button planificationCreator;
     private Button planificationViewer;
+    private Button logout;
+
+    //Firebase instances
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        //Firebase
+        mAuth=FirebaseAuth.getInstance();
 
         //Buttons
         presenceMontoring = (Button) findViewById(R.id.presenceMonitoring);
@@ -26,7 +35,7 @@ public class MainMenuActivity extends AppCompatActivity {
         temperature = (Button) findViewById(R.id.temperature);
         planificationCreator = (Button) findViewById(R.id.planificationCreator);
         planificationViewer = (Button) findViewById(R.id.planificationViewer);
-
+        logout = (Button) findViewById(R.id.logout);
 
         //onClickListeners
         presenceMontoring.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +70,15 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openPlanningMonitoring();
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                Intent intent =new Intent (getApplicationContext(),EmailPasswordActivity.class);
+                startActivity(intent);
             }
         });
     }
