@@ -9,26 +9,28 @@
 
 
     <LinearLayout
-        android:id="@+id/emailPasswordFields"
+        android:id="@+id/planification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <EditText
+        <TextView
             android:id="@+id/day1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Day1"/>
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:hint="Monday"/>
 
         <EditText
             android:id="@+id/drug1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Drug1"/>
+            android:hint="Medication"/>
 
     </LinearLayout>
 
@@ -39,22 +41,148 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <EditText
+        <TextView
             android:id="@+id/day2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Day2"/>
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:hint="Tuesday"/>
 
         <EditText
             android:id="@+id/drug2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Drug2"/>
+            android:hint="Medication"/>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/day3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:hint="Wenesday"/>
+
+        <EditText
+            android:id="@+id/drug3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Medication"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/day4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:hint="Thursday"/>
+
+        <EditText
+            android:id="@+id/drug4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Medication"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/day5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:hint="Friday"/>
+
+        <EditText
+            android:id="@+id/drug5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Medication"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/day6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:hint="Saturday"/>
+
+        <EditText
+            android:id="@+id/drug6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Medication"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/day7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:hint="Sunday"/>
+
+        <EditText
+            android:id="@+id/drug7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Medication"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,6 +206,7 @@
             android:layout_weight="1"
             android:text="Cancel" />
     </LinearLayout>
+
 
 
 </LinearLayout>

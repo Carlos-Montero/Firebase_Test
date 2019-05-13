@@ -213,14 +213,27 @@ public class EmailPasswordActivity extends AppCompatActivity {
         mHashmap.put("Presence/down", "No");
         mHashmap.put("Temperature/temperature", "15 ºC");
         mHashmap.put("Tap/tap_state", "cerrado");
-        mHashmap.put("Medication/drug1/name", "Ibuprofeno");
-        mHashmap.put("Medication/drug1/day", "lunes");
-        mHashmap.put("Medication/drug1/taken", "no");
-        mHashmap.put("Medication/drug1/time_taken", "21h");
-        mHashmap.put("Medication/drug2/name", "Ibuprofeno");
-        mHashmap.put("Medication/drug2/day", "lunes");
-        mHashmap.put("Medication/drug2/taken", "no");
-        mHashmap.put("Medication/drug2/time_taken", "21h");
+        mHashmap.put("Medication/monday/name", "N/A");
+        mHashmap.put("Medication/monday/taken", "Not taked");
+        mHashmap.put("Medication/monday/time_taken", "No time");
+        mHashmap.put("Medication/tuesday/name", "N/A");
+        mHashmap.put("Medication/tuesday/taken", "Not taked");
+        mHashmap.put("Medication/tuesday/time_taken", "No time");
+        mHashmap.put("Medication/wenesday/name", "N/A");
+        mHashmap.put("Medication/wenesday/taken", "Not taked");
+        mHashmap.put("Medication/wenesday/time_taken", "No time");
+        mHashmap.put("Medication/thursday/name", "N/A");
+        mHashmap.put("Medication/thursday/taken", "Not taked");
+        mHashmap.put("Medication/thursday/time_taken", "No time");
+        mHashmap.put("Medication/friday/name", "N/A");
+        mHashmap.put("Medication/friday/taken", "Not taked");
+        mHashmap.put("Medication/friday/time_taken", "No time");
+        mHashmap.put("Medication/saturday/name", "N/A");
+        mHashmap.put("Medication/saturday/taken", "Not taked");
+        mHashmap.put("Medication/saturday/time_taken", "No time");
+        mHashmap.put("Medication/sunday/name", "N/A");
+        mHashmap.put("Medication/sunday/taken", "Not taked");
+        mHashmap.put("Medication/sunday/time_taken", "No time");
 
        // mDbRef.child(user_id).updateChildren(mHashmap);
 

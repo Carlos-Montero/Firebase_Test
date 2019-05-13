@@ -20,7 +20,8 @@ public class CreatePlanningActivity extends AppCompatActivity {
 
 
     //DECLARACIÓN VARIABLES
-    private EditText day1,day2,drug1,drug2;
+    private EditText drug1,drug2,drug3,drug4,drug5,drug6,drug7;
+    private TextView day1,day2,day3,day4,day5,day6,day7;
     private Button saveButton, cancelButton;
 
     @Override
@@ -39,9 +40,21 @@ public class CreatePlanningActivity extends AppCompatActivity {
 
         // Views
         day1 = findViewById(R.id.day1);
-        drug1 = findViewById(R.id.drug1);
         day2 = findViewById(R.id.day2);
+        day3 = findViewById(R.id.day3);
+        day4 = findViewById(R.id.day4);
+        day5 = findViewById(R.id.day5);
+        day6 = findViewById(R.id.day6);
+        day7 = findViewById(R.id.day7);
+
+        drug1 = findViewById(R.id.drug1);
         drug2 = findViewById(R.id.drug2);
+        drug3 = findViewById(R.id.drug3);
+        drug4 = findViewById(R.id.drug4);
+        drug5 = findViewById(R.id.drug5);
+        drug6 = findViewById(R.id.drug6);
+        drug7 = findViewById(R.id.drug7);
+
 
 
 
@@ -63,15 +76,21 @@ public class CreatePlanningActivity extends AppCompatActivity {
         //Register listener
         saveButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                final String day_1 = day1.getText().toString().trim();
-                final String day_2= drug1.getText().toString().trim();
-                final String drug_1 = day2.getText().toString().trim();
+                final String drug_1 = drug1.getText().toString().trim();
                 final String drug_2= drug2.getText().toString().trim();
+                final String drug_3 = drug3.getText().toString().trim();
+                final String drug_4= drug4.getText().toString().trim();
+                final String drug_5 = drug5.getText().toString().trim();
+                final String drug_6= drug6.getText().toString().trim();
+                final String drug_7= drug7.getText().toString().trim();
 
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("drug1").child("day").setValue(day_1);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("drug1").child("name").setValue(drug_1);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("drug2").child("day").setValue(day_2);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("drug2").child("name").setValue(drug_2);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("name").setValue(drug_1);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("name").setValue(drug_2);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("name").setValue(drug_3);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("name").setValue(drug_4);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("name").setValue(drug_5);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("name").setValue(drug_6);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("name").setValue(drug_7);
 
                 Intent intent =new Intent (getApplicationContext(),MainMenuActivity.class);
                 startActivity(intent);
