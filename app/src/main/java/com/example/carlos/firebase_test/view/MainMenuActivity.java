@@ -9,6 +9,12 @@ import com.example.carlos.firebase_test.EmailPasswordActivity;
 import com.example.carlos.firebase_test.R;
 import com.google.firebase.auth.FirebaseAuth;
 
+/**
+ * The MainMneuActivity is the responsible to show to the user
+ * all the functionalities that has our service.
+ * Is the first activity showed after the Registration or LogIn process.
+ * It also implements the LogOut functionality.
+ */
 public class MainMenuActivity extends AppCompatActivity {
 
     private Button presenceMontoring;

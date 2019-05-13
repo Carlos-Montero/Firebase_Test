@@ -14,6 +14,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * The WaterControlActivity indicates the current state of the tap
+ * and lets to order for more or less water.
+ */
 public class WaterControlActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;

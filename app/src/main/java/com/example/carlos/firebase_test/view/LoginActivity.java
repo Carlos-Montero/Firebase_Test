@@ -9,7 +9,9 @@ import android.widget.EditText;
 
 import com.example.carlos.firebase_test.R;
 
-
+/**
+ * NOT USED
+ */
 public class LoginActivity extends AppCompatActivity  implements
         View.OnClickListener{
 

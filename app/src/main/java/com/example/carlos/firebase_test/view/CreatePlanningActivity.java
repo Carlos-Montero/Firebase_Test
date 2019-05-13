@@ -13,6 +13,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * The CreatePlanningActivity let to create the medical planning
+ * for the users.
+ * For each day of the week, it lets to indicate what medicine is
+ * needed to be taken.
+ * In sends this information to the Firebase RealTime DataBase.
+ */
 public class CreatePlanningActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;

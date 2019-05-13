@@ -18,6 +18,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * The PlanningMonitoringActivity is the responsible
+ * to show to the users what is the medical planning.
+ * It includes for each day of the week, what medicine is
+ * needed to be taken, if has been taked and at what time.
+ */
 public class PlanningMonitoringActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;

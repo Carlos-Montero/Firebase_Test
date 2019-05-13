@@ -30,7 +30,15 @@ import java.util.HashMap;
 import java.util.Map;
 //import com.google.firebase.quickstart.auth.R;
 
-
+/**
+ * EmailPasswordActivity:
+ *
+ * This activity is used to Register and LogIn
+ * users in our application.
+ * One a user is registered, it push to the Firebase
+ * RealTime DataBase a HashMap with all the information
+ * needed.
+ */
 public class EmailPasswordActivity extends AppCompatActivity {
 
     //DECLARACIÓN VARIABLES

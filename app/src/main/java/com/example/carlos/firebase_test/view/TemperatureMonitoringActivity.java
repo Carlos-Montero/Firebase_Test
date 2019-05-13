@@ -14,6 +14,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * The TemperatureMonitoringActivity indicates the current temperature
+ * that he sensor has.
+ */
 public class TemperatureMonitoringActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
