@@ -30,8 +30,8 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
     private TextView downsensor;
 
     //Values
-    String upsensorvalue;
-    String downsensorvalue;
+    private String upsensorvalue;
+    private String downsensorvalue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

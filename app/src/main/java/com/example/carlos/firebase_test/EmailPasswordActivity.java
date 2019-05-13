@@ -212,7 +212,7 @@ public class EmailPasswordActivity extends AppCompatActivity {
         mHashmap.put("Presence/up", "No");
         mHashmap.put("Presence/down", "No");
         mHashmap.put("Temperature/temperature", "15 ºC");
-        mHashmap.put("Tap/tap_state", "cerrado");
+        mHashmap.put("Tap/tap_state", "Close");
         mHashmap.put("Medication/monday/name", "N/A");
         mHashmap.put("Medication/monday/taken", "Not taked");
         mHashmap.put("Medication/monday/time_taken", "No time");

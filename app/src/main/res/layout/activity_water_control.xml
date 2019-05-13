@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:orientation="vertical">
     </LinearLayout>
 
@@ -28,35 +28,52 @@
             android:layout_marginBottom="24dp"
             android:text="Tap Control"
             android:textSize="36dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <Button
+                android:id="@+id/lessWater"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:layout_weight="1"
+                android:text="-" />
+            <Button
+                android:id="@+id/moreWater"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:layout_weight="1"
+                android:text="+" />
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
-        <Button
-            android:id="@+id/lessWater"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="36dp"
-            android:layout_weight="1"
-            android:text="-" />
-        <Button
-            android:id="@+id/moreWater"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="36dp"
-            android:layout_weight="1"
-            android:text="+" />
-    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
+        <TextView android:id="@+id/title2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="24dp"
+            android:text="Tap Current State:"
+            android:textSize="26dp"/>
+        <TextView android:id="@+id/state"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="24dp"
+            android:text="current_state"
+            android:textSize="26dp"/>
     </LinearLayout>
 
 </LinearLayout>
