@@ -115,7 +115,7 @@ public class CreatePlanningActivity extends AppCompatActivity {
                 mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("time_taken").setValue("No time");
                 mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("time_taken").setValue("No time");
                 mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("time_taken").setValue("No time");
-                        
+
                 Intent intent =new Intent (getApplicationContext(),MainMenuActivity.class);
                 startActivity(intent);
             }
