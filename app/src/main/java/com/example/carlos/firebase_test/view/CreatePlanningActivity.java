@@ -99,6 +99,23 @@ public class CreatePlanningActivity extends AppCompatActivity {
                 mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("name").setValue(drug_6);
                 mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("name").setValue(drug_7);
 
+                //For new planning, all values for taken and time_taken must be reset to default values
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("taken").setValue("Not taked");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("taken").setValue("Not taked");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("taken").setValue("Not taked");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("taken").setValue("Not taked");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("taken").setValue("Not taked");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("taken").setValue("Not taked");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("taken").setValue("Not taked");
+
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("time_taken").setValue("No time");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("time_taken").setValue("No time");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("time_taken").setValue("No time");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("time_taken").setValue("No time");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("time_taken").setValue("No time");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("time_taken").setValue("No time");
+                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("time_taken").setValue("No time");
+                        
                 Intent intent =new Intent (getApplicationContext(),MainMenuActivity.class);
                 startActivity(intent);
             }

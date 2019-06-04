@@ -15,6 +15,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 /**
  * The PresenceMonitoringAActivity indicates the state of the
  * presence sensors.
@@ -70,6 +72,7 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
                 String value = dataSnapshot.getValue(String.class);
                 upsensor.setText(value);
                 upsensorvalue=value;
+                callToast();
                 //Log.d(TAG, "Value is: " + value);
             }
 
@@ -95,6 +98,7 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
                 String value2 = dataSnapshot.getValue(String.class);
                 downsensor.setText(value2);
                 downsensorvalue=value2;
+                callToast();
                 //Log.d(TAG, "Value is: " + value);
             }
 
@@ -107,18 +111,21 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
         };
 
 
-
         mDatabase.child("User").child(user_id).child("hardware details").child("Presence").child("down").addValueEventListener(postListener2);
 
         //***************************************************************************************
 
-        //TOAST
-        if (upsensorvalue=="no" && downsensorvalue=="yes") {
-            Toast toast = Toast.makeText(getApplicationContext(), "Caída", Toast.LENGTH_LONG);
-            toast.show();
-        }
-        //
 
     }
+
+
+
+    private void callToast(){
+        if (Objects.equals(upsensorvalue,"No")&& Objects.equals(downsensorvalue,"Yes")) {
+            Toast toast = Toast.makeText(getApplicationContext(), "Se ha detectado una caída", Toast.LENGTH_LONG);
+            toast.show();
+            }
+        }
+
 
 }

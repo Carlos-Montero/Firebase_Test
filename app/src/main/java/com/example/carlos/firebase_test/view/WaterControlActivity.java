@@ -55,15 +55,18 @@ public class WaterControlActivity extends AppCompatActivity {
         lessWater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue("Less Water");
+                String current = String.valueOf(state.getText());
+                String next=nextLessState(current);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue(next);
             }
         });
 
         moreWater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue("More Water");
+                String current = String.valueOf(state.getText());
+                String next=nextMoreState(current);
+                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue(next);
             }
         });
 
@@ -92,4 +95,44 @@ public class WaterControlActivity extends AppCompatActivity {
         //***************************************************************************************
 
     }
+
+
+
+    /**
+     * nextMoreState return the next state when moreWater button is pressed
+     */
+    public String nextMoreState(String current_state){
+        if (current_state.equals("Cerrado")) {
+            return "1";
+        }
+        if (current_state.equals("1")) {
+            return "2";
+        }
+        if (current_state.equals("2")) {
+            return "3";
+        }
+        else
+            return "Full";
+    }
+
+
+    /**
+     * nextLessState return the next state when lessWater button is pressed
+     */
+    public String nextLessState(String current_state){
+        if (current_state.equals("Full")) {
+            return "3";
+        }
+        if (current_state.equals("3")) {
+            return "2";
+        }
+        if (current_state.equals("2")) {
+            return "1";
+        }
+        else
+            return "Cerrado";
+    }
+
+
+
 }
