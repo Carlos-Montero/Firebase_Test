@@ -112,7 +112,7 @@ public class WaterControlActivity extends AppCompatActivity {
             return "3";
         }
         else
-            return "Full";
+            return "4";
     }
 
 
@@ -120,7 +120,7 @@ public class WaterControlActivity extends AppCompatActivity {
      * nextLessState return the next state when lessWater button is pressed
      */
     public String nextLessState(String current_state){
-        if (current_state.equals("Full")) {
+        if (current_state.equals("4")) {
             return "3";
         }
         if (current_state.equals("3")) {
