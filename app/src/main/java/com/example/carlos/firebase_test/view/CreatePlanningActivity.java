@@ -31,6 +31,11 @@ public class CreatePlanningActivity extends AppCompatActivity {
     private TextView day1,day2,day3,day4,day5,day6,day7;
     private Button saveButton, cancelButton;
 
+
+    /**In onCreate():
+     * saveButton listener saves the new planning created
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +76,7 @@ public class CreatePlanningActivity extends AppCompatActivity {
 
 
 
-        //Register listener
+
         cancelButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent =new Intent (getApplicationContext(),MainMenuActivity.class);
@@ -80,7 +85,7 @@ public class CreatePlanningActivity extends AppCompatActivity {
 
         });
 
-        //Register listener
+
         saveButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 final String drug_1 = drug1.getText().toString().trim();
@@ -91,30 +96,30 @@ public class CreatePlanningActivity extends AppCompatActivity {
                 final String drug_6= drug6.getText().toString().trim();
                 final String drug_7= drug7.getText().toString().trim();
 
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("name").setValue(drug_1);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("name").setValue(drug_2);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("name").setValue(drug_3);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("name").setValue(drug_4);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("name").setValue(drug_5);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("name").setValue(drug_6);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("name").setValue(drug_7);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.monday)).child(getString(R.string.name)).setValue(drug_1);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.tuesday)).child(getString(R.string.name)).setValue(drug_2);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.wenesday)).child(getString(R.string.name)).setValue(drug_3);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.thursday)).child(getString(R.string.name)).setValue(drug_4);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.friday)).child(getString(R.string.name)).setValue(drug_5);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.saturday)).child(getString(R.string.name)).setValue(drug_6);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.sunday)).child(getString(R.string.name)).setValue(drug_7);
 
                 //For new planning, all values for taken and time_taken must be reset to default values
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("taken").setValue("Not taked");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("taken").setValue("Not taked");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("taken").setValue("Not taked");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("taken").setValue("Not taked");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("taken").setValue("Not taked");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("taken").setValue("Not taked");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("taken").setValue("Not taked");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.monday)).child(getString(R.string.taken)).setValue("Not taked");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.tuesday)).child(getString(R.string.taken)).setValue("Not taked");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.wenesday)).child(getString(R.string.taken)).setValue("Not taked");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.thursday)).child(getString(R.string.taken)).setValue("Not taked");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.friday)).child(getString(R.string.taken)).setValue("Not taked");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.saturday)).child(getString(R.string.taken)).setValue("Not taked");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.sunday)).child(getString(R.string.taken)).setValue("Not taked");
 
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("time_taken").setValue("No time");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("time_taken").setValue("No time");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("time_taken").setValue("No time");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("time_taken").setValue("No time");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("time_taken").setValue("No time");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("time_taken").setValue("No time");
-                mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("time_taken").setValue("No time");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.monday)).child(getString(R.string.time_taken)).setValue("No time");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.tuesday)).child(getString(R.string.time_taken)).setValue("No time");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.wenesday)).child(getString(R.string.time_taken)).setValue("No time");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.thursday)).child(getString(R.string.time_taken)).setValue("No time");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.friday)).child(getString(R.string.time_taken)).setValue("No time");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.saturday)).child(getString(R.string.time_taken)).setValue("No time");
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.sunday)).child(getString(R.string.time_taken)).setValue("No time");
 
                 Intent intent =new Intent (getApplicationContext(),MainMenuActivity.class);
                 startActivity(intent);

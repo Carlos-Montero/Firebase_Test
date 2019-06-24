@@ -39,6 +39,11 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
     private String upsensorvalue;
     private String downsensorvalue;
 
+    /**
+     * In onCreate():
+     * postListener is the listener for UpSensor value
+     * postListener2 is the listener for DownSensor value
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +68,6 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
 
         //UpSensor Listener
         //**************************************************************************************
-
         ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -83,13 +87,12 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
             }
 
         };
-        mDatabase.child("User").child(user_id).child("hardware details").child("Presence").child("up").addValueEventListener(postListener);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.presence)).child(getString(R.string.up)).addValueEventListener(postListener);
 
         //***************************************************************************************
 
         //DownSensor Listener
         //**************************************************************************************
-
         ValueEventListener postListener2 = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -111,7 +114,7 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
         };
 
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Presence").child("down").addValueEventListener(postListener2);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.presence)).child(getString(R.string.down)).addValueEventListener(postListener2);
 
         //***************************************************************************************
 
@@ -119,7 +122,10 @@ public class PresenceMonitoringActivity extends AppCompatActivity {
     }
 
 
-
+    /**
+    * callToast() shows a toast if fall is detected
+     *
+     */
     private void callToast(){
         if (Objects.equals(upsensorvalue,"No")&& Objects.equals(downsensorvalue,"Yes")) {
             Toast toast = Toast.makeText(getApplicationContext(), "Se ha detectado una caída", Toast.LENGTH_LONG);

@@ -30,6 +30,10 @@ public class WaterControlActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     // [END declare_database_ref]
 
+    /**
+     * In onCreate():
+     * postListenerState is the listener for Tap State value
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +61,7 @@ public class WaterControlActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String current = String.valueOf(state.getText());
                 String next=nextLessState(current);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue(next);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.tap)).child(getString(R.string.tap_child)).setValue(next);
             }
         });
 
@@ -66,12 +70,12 @@ public class WaterControlActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String current = String.valueOf(state.getText());
                 String next=nextMoreState(current);
-                mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").setValue(next);
+                mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.tap)).child(getString(R.string.tap_child)).setValue(next);
             }
         });
 
 
-        //Listener Tap Current State
+
         //**************************************************************************************
         ValueEventListener postListenerState = new ValueEventListener() {
             @Override
@@ -91,7 +95,7 @@ public class WaterControlActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Tap").child("tap_state").addValueEventListener(postListenerState);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.tap)).child(getString(R.string.tap_child)).addValueEventListener(postListenerState);
         //***************************************************************************************
 
     }

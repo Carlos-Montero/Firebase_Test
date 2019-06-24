@@ -34,7 +34,11 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
     private TextView taken1,taken2,taken3,taken4,taken5,taken6,taken7;
     private TextView time1,time2,time3,time4,time5,time6,time7;
 
-
+    /**In onCreate():
+     * postListenerMed1-7 are the listeners for medication names,
+     *postListenerTaken1-7 are the listeners for taken values,
+     * postListenerTime1-7 are the listeners for time_taken values
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +81,10 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
 
 
-        //Listener Medication1
+        ///**
+        //     * postListenerMed1 is the listener for monday medication name value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerMed1 = new ValueEventListener() {
             @Override
@@ -97,10 +104,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("name").addValueEventListener(postListenerMed1);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.monday)).child(getString(R.string.name)).addValueEventListener(postListenerMed1);
         //***************************************************************************************
 
-        //Listener Medication2
+        ///**
+        //     * postListenerMed2 is the listener for tuesday medication name value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerMed2 = new ValueEventListener() {
             @Override
@@ -120,10 +130,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-       mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("name").addValueEventListener(postListenerMed2);
+       mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.tuesday)).child(getString(R.string.name)).addValueEventListener(postListenerMed2);
         //***************************************************************************************
 
-        //Listener Medication3
+        ///**
+        //     * postListenerMed3 is the listener for wenesday medication name value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerMed3 = new ValueEventListener() {
             @Override
@@ -143,10 +156,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("name").addValueEventListener(postListenerMed3);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.wenesday)).child(getString(R.string.name)).addValueEventListener(postListenerMed3);
         //***************************************************************************************
 
-        //Listener Medication4
+        ///**
+        //     * postListenerMed4 is the listener for thursday medication name value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerMed4 = new ValueEventListener() {
             @Override
@@ -166,10 +182,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("name").addValueEventListener(postListenerMed4);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.thursday)).child(getString(R.string.name)).addValueEventListener(postListenerMed4);
         //***************************************************************************************
 
-        //Listener Medication5
+        ///**
+        //     * postListenerMed5 is the listener for friday medication name value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerMed5 = new ValueEventListener() {
             @Override
@@ -189,10 +208,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("name").addValueEventListener(postListenerMed5);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.friday)).child(getString(R.string.name)).addValueEventListener(postListenerMed5);
         //***************************************************************************************
 
-        //Listener Medication6
+        ///**
+        //     * postListenerMed6 is the listener for saturday medication name value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerMed6 = new ValueEventListener() {
             @Override
@@ -212,10 +234,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("name").addValueEventListener(postListenerMed6);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.saturday)).child(getString(R.string.name)).addValueEventListener(postListenerMed6);
         //***************************************************************************************
 
-        //Listener Medication7
+        ///**
+        //     * postListenerMed7 is the listener for sunday medication name value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerMed7 = new ValueEventListener() {
             @Override
@@ -235,11 +260,14 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("name").addValueEventListener(postListenerMed7);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.sunday)).child(getString(R.string.name)).addValueEventListener(postListenerMed7);
         //***************************************************************************************
 
 
-        //Listener Taken1
+        ///**
+        //     * postListenerTaken1 is the listener for monday taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTaken1 = new ValueEventListener() {
             @Override
@@ -259,11 +287,14 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("taken").addValueEventListener(postListenerTaken1);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.monday)).child(getString(R.string.taken)).addValueEventListener(postListenerTaken1);
         //***************************************************************************************
 
 
-        //Listener Taken2
+        ///**
+        //     * postListenerTaken2 is the listener for tuesday taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTaken2 = new ValueEventListener() {
             @Override
@@ -283,10 +314,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("taken").addValueEventListener(postListenerTaken2);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.tuesday)).child(getString(R.string.taken)).addValueEventListener(postListenerTaken2);
         //***************************************************************************************
 
-        //Listener Taken3
+        ///**
+        //     * postListenerTaken3 is the listener for wenesday taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTaken3 = new ValueEventListener() {
             @Override
@@ -306,10 +340,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("taken").addValueEventListener(postListenerTaken3);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.wenesday)).child(getString(R.string.taken)).addValueEventListener(postListenerTaken3);
         //***************************************************************************************
 
-        //Listener Taken4
+        ///**
+        //     * postListenerTaken4 is the listener for thursday taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTaken4 = new ValueEventListener() {
             @Override
@@ -329,10 +366,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("taken").addValueEventListener(postListenerTaken4);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.thursday)).child(getString(R.string.taken)).addValueEventListener(postListenerTaken4);
         //***************************************************************************************
 
-        //Listener Taken5
+        ///**
+        //     * postListenerTaken5 is the listener for friday taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTaken5 = new ValueEventListener() {
             @Override
@@ -352,10 +392,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("taken").addValueEventListener(postListenerTaken5);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.friday)).child(getString(R.string.taken)).addValueEventListener(postListenerTaken5);
         //***************************************************************************************
 
-        //Listener Taken6
+        ///**
+        //     * postListenerTaken6 is the listener for saturday taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTaken6 = new ValueEventListener() {
             @Override
@@ -375,10 +418,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("taken").addValueEventListener(postListenerTaken6);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.saturday)).child(getString(R.string.taken)).addValueEventListener(postListenerTaken6);
         //***************************************************************************************
 
-        //Listener Taken7
+        ///**
+        //     * postListenerTaken7 is the listener for sunday taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTaken7 = new ValueEventListener() {
             @Override
@@ -398,13 +444,16 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("taken").addValueEventListener(postListenerTaken7);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.sunday)).child(getString(R.string.taken)).addValueEventListener(postListenerTaken7);
         //***************************************************************************************
 
 
 
 
-        //Listener Time1
+        ///**
+        //     * postListenerTime1 is the listener for monday time_taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTime1 = new ValueEventListener() {
             @Override
@@ -424,10 +473,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("monday").child("time_taken").addValueEventListener(postListenerTime1);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.monday)).child(getString(R.string.time_taken)).addValueEventListener(postListenerTime1);
         //***************************************************************************************
 
-        //Listener Time2
+        ///**
+        //     * postListenerTime2 is the listener for tuesday time_taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTime2 = new ValueEventListener() {
             @Override
@@ -447,10 +499,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("tuesday").child("time_taken").addValueEventListener(postListenerTime2);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.tuesday)).child(getString(R.string.time_taken)).addValueEventListener(postListenerTime2);
         //***************************************************************************************
 
-        //Listener Time3
+        ///**
+        //     * postListenerTime3 is the listener for wenesday time_taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTime3 = new ValueEventListener() {
             @Override
@@ -470,11 +525,14 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("wenesday").child("time_taken").addValueEventListener(postListenerTime3);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.wenesday)).child(getString(R.string.time_taken)).addValueEventListener(postListenerTime3);
         //***************************************************************************************
 
 
-        //Listener Time4
+        ///**
+        //     * postListenerTime4 is the listener for thursday time_taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTime4 = new ValueEventListener() {
             @Override
@@ -494,10 +552,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("thursday").child("time_taken").addValueEventListener(postListenerTime4);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.thursday)).child(getString(R.string.time_taken)).addValueEventListener(postListenerTime4);
         //***************************************************************************************
 
-        //Listener Time5
+        ///**
+        //     * postListenerTime5 is the listener for friday time_taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTime5 = new ValueEventListener() {
             @Override
@@ -517,10 +578,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("friday").child("time_taken").addValueEventListener(postListenerTime5);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.friday)).child(getString(R.string.time_taken)).addValueEventListener(postListenerTime5);
         //***************************************************************************************
 
-        //Listener Time6
+        ///**
+        //     * postListenerTime6 is the listener for saturday time_taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTime6 = new ValueEventListener() {
             @Override
@@ -540,10 +604,13 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("saturday").child("time_taken").addValueEventListener(postListenerTime6);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.saturday)).child(getString(R.string.time_taken)).addValueEventListener(postListenerTime6);
         //***************************************************************************************
 
-        //Listener Time7
+        ///**
+        //     * postListenerTime7 is the listener for sunday time_taken value
+        //     *
+        //     */
         //**************************************************************************************
         ValueEventListener postListenerTime7 = new ValueEventListener() {
             @Override
@@ -563,7 +630,7 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
         };
 
-        mDatabase.child("User").child(user_id).child("hardware details").child("Medication").child("sunday").child("time_taken").addValueEventListener(postListenerTime7);
+        mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.medication)).child(getString(R.string.sunday)).child(getString(R.string.time_taken)).addValueEventListener(postListenerTime7);
         //***************************************************************************************
 
 

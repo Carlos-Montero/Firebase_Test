@@ -10,7 +10,7 @@ import com.example.carlos.firebase_test.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 /**
- * The MainMneuActivity is the responsible to show to the user
+ * The MainMenuActivity is the responsible to show to the user
  * all the functionalities that has our service.
  * Is the first activity showed after the Registration or LogIn process.
  * It also implements the LogOut functionality.
@@ -89,27 +89,49 @@ public class MainMenuActivity extends AppCompatActivity {
         });
     }
 
+
     //Intents
+
+    /**
+     * openCreatePlanning() sends us to CreatePlanningActivity
+     *
+     */
     public void openCreatePlanning(){
         Intent intent =new Intent (this,CreatePlanningActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * openPlanningMonitoring() sends us to PlanningMonitoringActivity
+     *
+     */
     public void openPlanningMonitoring(){
         Intent intent =new Intent (this,PlanningMonitoringActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * openPresenceMonitoring() sends us to PresenceMonitoringActivity
+     *
+     */
     public void openPresenceMonitoring(){
         Intent intent =new Intent (this,PresenceMonitoringActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * openTemperatureMonitoring() sends us to TemperatureMonitoringActivity
+     *
+     */
     public void openTemperatureMonitoring(){
         Intent intent =new Intent (this,TemperatureMonitoringActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * openWaterControl() sends us to WaterControlActivity
+     *
+     */
     public void openWaterControl(){
         Intent intent =new Intent (this,WaterControlActivity.class);
         startActivity(intent);

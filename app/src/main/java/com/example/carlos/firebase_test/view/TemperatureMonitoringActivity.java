@@ -28,7 +28,10 @@ public class TemperatureMonitoringActivity extends AppCompatActivity {
     //Textview
     private TextView temperature;
 
-
+    /**
+     * In onCreate():
+     * postListener is the listener for Temperature value
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +44,7 @@ public class TemperatureMonitoringActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // [END initialize_database_ref]
 
-        //Temperature Listener
+
         //**************************************************************************************
 
         ValueEventListener postListener = new ValueEventListener() {
@@ -66,7 +69,7 @@ public class TemperatureMonitoringActivity extends AppCompatActivity {
         String user_id;
         user_id=mAuth.getUid();
 
-       mDatabase.child("User").child(user_id).child("hardware details").child("Temperature").child("temperature").addValueEventListener(postListener);
+       mDatabase.child(getString(R.string.user)).child(user_id).child(getString(R.string.hardware_details)).child(getString(R.string.Temperature)).child(getString(R.string.Temperature_child)).addValueEventListener(postListener);
         //***************************************************************************************
 
     }

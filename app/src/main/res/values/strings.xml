@@ -2,7 +2,70 @@
     <string name="app_name">Firebase_Test</string>
 
 
-   
+    <string name="presence_up">"Presence/up"</string>
+    <string name="default_up">"No"</string>
+    <string name="presence_down">"Presence/down"</string>
+    <string name="default_down">"No"</string>
+    <string name="temperature">"Temperature/temperature"</string>
+    <string name="default_temperature">"15 ºC"</string>
+    <string name="tap_state">"Tap/tap_state"</string>
+    <string name="default_tap_state">"Cerrado"</string>
 
+    <string name="defaul_medicine">"N/A"</string>
+    <string name="monday_medicine">"Medication/monday/name"</string>
+    <string name="tuesday_medicine">"Medication/tuesday/name"</string>
+    <string name="wenesday_medicine">"Medication/wenesday/name"</string>
+    <string name="thursday_medicine">"Medication/thursday/name"</string>
+    <string name="friday_medicine">"Medication/friday/name"</string>
+    <string name="saturday_medicine">"Medication/saturday/name"</string>
+    <string name="sunday_medicine">"Medication/sunday/name"</string>
+
+    <string name="defaul_taken">"Not taked"</string>
+    <string name="monday_taken">"Medication/monday/taken"</string>
+    <string name="tuesday_taken">"Medication/tuesday/taken"</string>
+    <string name="wenesday_taken">"Medication/wenesday/taken"</string>
+    <string name="thursday_taken">"Medication/thursday/taken"</string>
+    <string name="friday_taken">"Medication/friday/taken"</string>
+    <string name="saturday_taken">"Medication/saturday/taken"</string>
+    <string name="sunday_taken">"Medication/sunday/taken"</string>
+
+    <string name="defaul_time_taken">"No time"</string>
+    <string name="monday_time_taken">"Medication/monday/time_taken"</string>
+    <string name="tuesday_time_taken">"Medication/tuesday/time_taken"</string>
+    <string name="wenesday_time_taken">"Medication/wenesday/time_taken"</string>
+    <string name="thursday_time_taken">"Medication/thursday/time_taken"</string>
+    <string name="friday_time_taken">"Medication/friday/time_taken"</string>
+    <string name="saturday_time_taken">"Medication/saturday/time_taken"</string>
+    <string name="sunday_time_taken">"Medication/sunday/time_taken"</string>
+
+
+
+
+    <string name="user">"User"</string>
+    <string name="hardware_details">"hardware details"</string>
+    <string name="medication">"Medication"</string>
+
+    <string name="monday">"monday"</string>
+    <string name="tuesday">"tuesday"</string>
+    <string name="wenesday">"wenesday"</string>
+    <string name="thursday">"thursday"</string>
+    <string name="friday">"friday"</string>
+    <string name="saturday">"saturday"</string>
+    <string name="sunday">"sunday"</string>
+
+    <string name="name">"name"</string>
+    <string name="taken">"taken"</string>
+    <string name="time_taken">"time_taken"</string>
+
+
+    <string name="presence">"Presence"</string>
+    <string name="up">"up"</string>
+    <string name="down">"down"</string>
+
+    <string name="Temperature">"Temperature"</string>
+    <string name="Temperature_child">"temperature"</string>
+
+    <string name="tap">"Tap"</string>
+    <string name="tap_child">"tap_state"</string>
 
 </resources>

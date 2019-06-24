@@ -217,31 +217,34 @@ public class EmailPasswordActivity extends AppCompatActivity {
         //Writing Hashmap for the rest of elements in DB
         Map<String, Object> mHashmap = new HashMap<>();
 
-        mHashmap.put("Presence/up", "No");
-        mHashmap.put("Presence/down", "No");
-        mHashmap.put("Temperature/temperature", "15 ºC");
-        mHashmap.put("Tap/tap_state", "Close");
-        mHashmap.put("Medication/monday/name", "N/A");
-        mHashmap.put("Medication/monday/taken", "Not taked");
-        mHashmap.put("Medication/monday/time_taken", "No time");
-        mHashmap.put("Medication/tuesday/name", "N/A");
-        mHashmap.put("Medication/tuesday/taken", "Not taked");
-        mHashmap.put("Medication/tuesday/time_taken", "No time");
-        mHashmap.put("Medication/wenesday/name", "N/A");
-        mHashmap.put("Medication/wenesday/taken", "Not taked");
-        mHashmap.put("Medication/wenesday/time_taken", "No time");
-        mHashmap.put("Medication/thursday/name", "N/A");
-        mHashmap.put("Medication/thursday/taken", "Not taked");
-        mHashmap.put("Medication/thursday/time_taken", "No time");
-        mHashmap.put("Medication/friday/name", "N/A");
-        mHashmap.put("Medication/friday/taken", "Not taked");
-        mHashmap.put("Medication/friday/time_taken", "No time");
-        mHashmap.put("Medication/saturday/name", "N/A");
-        mHashmap.put("Medication/saturday/taken", "Not taked");
-        mHashmap.put("Medication/saturday/time_taken", "No time");
-        mHashmap.put("Medication/sunday/name", "N/A");
-        mHashmap.put("Medication/sunday/taken", "Not taked");
-        mHashmap.put("Medication/sunday/time_taken", "No time");
+        mHashmap.put(getString(R.string.presence_up), getString(R.string.default_up));
+        mHashmap.put(getString(R.string.presence_down),  getString(R.string.default_down));
+        mHashmap.put(getString(R.string.temperature),  getString(R.string.default_temperature));
+        mHashmap.put(getString(R.string.tap_state),  getString(R.string.default_tap_state));
+
+        mHashmap.put(getString(R.string.monday_medicine), getString(R.string.defaul_medicine));
+        mHashmap.put(getString(R.string.tuesday_medicine), getString(R.string.defaul_medicine));
+        mHashmap.put(getString(R.string.wenesday_medicine), getString(R.string.defaul_medicine));
+        mHashmap.put(getString(R.string.thursday_medicine), getString(R.string.defaul_medicine));
+        mHashmap.put(getString(R.string.friday_medicine), getString(R.string.defaul_medicine));
+        mHashmap.put(getString(R.string.saturday_medicine), getString(R.string.defaul_medicine));
+        mHashmap.put(getString(R.string.sunday_medicine), getString(R.string.defaul_medicine));
+
+        mHashmap.put(getString(R.string.monday_taken), getString(R.string.defaul_taken));
+        mHashmap.put(getString(R.string.tuesday_taken), getString(R.string.defaul_taken));
+        mHashmap.put(getString(R.string.wenesday_taken), getString(R.string.defaul_taken));
+        mHashmap.put(getString(R.string.thursday_taken), getString(R.string.defaul_taken));
+        mHashmap.put(getString(R.string.friday_taken), getString(R.string.defaul_taken));
+        mHashmap.put(getString(R.string.saturday_taken), getString(R.string.defaul_taken));
+        mHashmap.put(getString(R.string.sunday_taken), getString(R.string.defaul_taken));
+
+        mHashmap.put(getString(R.string.monday_time_taken), getString(R.string.defaul_time_taken));
+        mHashmap.put(getString(R.string.tuesday_time_taken), getString(R.string.defaul_time_taken));
+        mHashmap.put(getString(R.string.wenesday_time_taken), getString(R.string.defaul_time_taken));
+        mHashmap.put(getString(R.string.thursday_time_taken), getString(R.string.defaul_time_taken));
+        mHashmap.put(getString(R.string.friday_time_taken), getString(R.string.defaul_time_taken));
+        mHashmap.put(getString(R.string.saturday_time_taken), getString(R.string.defaul_time_taken));
+        mHashmap.put(getString(R.string.sunday_time_taken), getString(R.string.defaul_time_taken));
 
        // mDbRef.child(user_id).updateChildren(mHashmap);
 
