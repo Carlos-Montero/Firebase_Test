@@ -10,6 +10,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * NOT USED
+ */
 public class PlanningMonitoringViewmodel extends ViewModel {
 
     private MutableLiveData<String> value;

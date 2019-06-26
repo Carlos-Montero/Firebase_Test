@@ -53,6 +53,10 @@ public class EmailPasswordActivity extends AppCompatActivity {
     private FirebaseDatabase mDatabase;
     private DatabaseReference mDbRef;
 
+    /**
+     * onCreated() defines the components of the layout
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +98,9 @@ public class EmailPasswordActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * loginUser() logs in the user to the Authentication Database in Firebase
+     */
     private void loginUser() {
         final String email = mEmailField.getText().toString().trim();
         final String password= mPasswordField.getText().toString().trim();
@@ -137,6 +144,10 @@ public class EmailPasswordActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * registerUser() Registers the user to the Authentication Database in Firebase
+     *
+     */
     private void registerUser() {
         final String email = mEmailField.getText().toString().trim();
         final String password= mPasswordField.getText().toString().trim();
@@ -191,6 +202,13 @@ public class EmailPasswordActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * addUsertoDatabase() adds the user to the Firebase Database, with default values for hardware details
+     * @param user_id (created automaticaly)
+     * @param email
+     * @param password
+     * @param hardware (ESP32_0001 by default)
+     */
     private void addUsertoDatabase(String user_id, String email, String password, String hardware) {
         mDatabase = FirebaseDatabase.getInstance();
         mDbRef = mDatabase.getReference("User");

@@ -36,7 +36,7 @@ public class PlanningMonitoringActivity extends AppCompatActivity {
 
     /**In onCreate():
      * postListenerMed1-7 are the listeners for medication names,
-     *postListenerTaken1-7 are the listeners for taken values,
+     * postListenerTaken1-7 are the listeners for taken values,
      * postListenerTime1-7 are the listeners for time_taken values
      */
     @Override

@@ -33,8 +33,8 @@ public class CreatePlanningActivity extends AppCompatActivity {
 
 
     /**In onCreate():
-     * saveButton listener saves the new planning created
-     *
+     * saveButton listener saves the new planning created. It sends to Firebase the medicines that the user
+     * has indicate for each day and reset all the values for "taken" and "time_taken" in Firebase with the default values
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

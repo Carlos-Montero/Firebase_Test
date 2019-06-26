@@ -3,6 +3,9 @@ package com.example.carlos.firebase_test.viewmodel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
 
+/**
+ * NOT USED
+ */
 public class TemperatureMonitoringViewmodel extends ViewModel {
 
     //LiveData for temperature value

@@ -17,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 /**
  * The WaterControlActivity indicates the current state of the tap
  * and lets to order for more or less water.
+ * The range of states are: Cerrado, 1, 2, 3 and 4.
  */
 public class WaterControlActivity extends AppCompatActivity {
 

@@ -5,6 +5,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
+/**
+ * NOT USED
+ *
+ */
 public abstract class FirebaseDatabaseRepository<Model> {
 /*
     protected DatabaseReference databaseReference;

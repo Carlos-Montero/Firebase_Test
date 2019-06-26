@@ -8,10 +8,10 @@ import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import java.util.List;
 
-/*
-Drug DAO Interface.
-Acts is an intermediary between the user and the database.
-All operations are difined below.
+/**
+ *Drug DAO Interface. (NOT USED)
+ * Acts is an intermediary between the user and the database.
+ * All operations are difined below.
  */
 
 @Dao

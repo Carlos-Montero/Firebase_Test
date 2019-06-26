@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Firebase_Test</string>
 
-
+    <!--
+    Variables for EmailPasswordActivity when HashMap is created
+    -->
     <string name="presence_up">"Presence/up"</string>
     <string name="default_up">"No"</string>
     <string name="presence_down">"Presence/down"</string>
@@ -11,6 +13,9 @@
     <string name="tap_state">"Tap/tap_state"</string>
     <string name="default_tap_state">"Cerrado"</string>
 
+    <!--
+    Variables for medication name, taked and time_taken values from PlanningMonitoring Activity and CreatePlanningActivity
+    -->
     <string name="defaul_medicine">"N/A"</string>
     <string name="monday_medicine">"Medication/monday/name"</string>
     <string name="tuesday_medicine">"Medication/tuesday/name"</string>
@@ -40,7 +45,9 @@
 
 
 
-
+    <!--
+        Variables for generic parameters
+     -->
     <string name="user">"User"</string>
     <string name="hardware_details">"hardware details"</string>
     <string name="medication">"Medication"</string>
@@ -57,14 +64,22 @@
     <string name="taken">"taken"</string>
     <string name="time_taken">"time_taken"</string>
 
-
+    <!--
+     Variables for PresenceMonitoringActivity
+     -->
     <string name="presence">"Presence"</string>
     <string name="up">"up"</string>
     <string name="down">"down"</string>
 
+    <!--
+     Variables for TemperatureMonitoringActivity
+     -->
     <string name="Temperature">"Temperature"</string>
     <string name="Temperature_child">"temperature"</string>
 
+    <!--
+     Variables for WaterControlActivity
+     -->
     <string name="tap">"Tap"</string>
     <string name="tap_child">"tap_state"</string>
 

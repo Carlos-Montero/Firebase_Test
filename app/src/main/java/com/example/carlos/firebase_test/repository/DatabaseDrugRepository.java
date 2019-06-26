@@ -12,7 +12,9 @@ import com.example.carlos.firebase_test.model.Drug;
 import com.example.carlos.firebase_test.model.DrugDAO;
 import com.example.carlos.firebase_test.model.DrugDatabase;
 
-
+/**
+ * NOT USED
+ */
 public class DatabaseDrugRepository {
 
     private DrugDAO mDrugDAO;

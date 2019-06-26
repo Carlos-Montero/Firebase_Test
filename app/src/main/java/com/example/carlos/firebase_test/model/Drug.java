@@ -5,14 +5,14 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-/*
-Class Drug used for ROOM DB
-
-Atributes:
-    Id (PK)
-    Drug Name
-    Quantity of pills
-    Days when user has to take medication
+/**
+ *Class Drug used for ROOM DB (NOT USED)
+ *
+ * Atributes:
+ *     Id (PK)
+ *     Drug Name
+ *     Quantity of pills
+ *     Days when user has to take medication
  */
 
 @Entity (tableName = "drugs")

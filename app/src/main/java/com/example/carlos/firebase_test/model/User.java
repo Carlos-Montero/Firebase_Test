@@ -20,26 +20,50 @@ public class User {
         this.hwserial = hwserial;
     }
 
+    /**
+     * getMail()
+     * @return mail
+     */
     public String getMail() {
         return mail;
     }
 
+    /**
+     * setMail()
+     * @param mail
+     */
     public void setMail(String mail) {
         this.mail = mail;
     }
 
+    /**
+     * getPassword()
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * setPassword()
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * getHWSerial
+     * @return hwserial
+     */
     public String getHWSerial() {
         return hwserial;
     }
 
+    /**
+     * setHWSerial
+     * @param hwSerial
+     */
     public void setHWSerial(String hwSerial) {
         this.hwserial = hwSerial;
     }
