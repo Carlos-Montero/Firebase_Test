@@ -27,6 +27,7 @@ public class CreatePlanningActivity extends AppCompatActivity {
 
 
     //DECLARACIÓN VARIABLES
+    
     private EditText drug1,drug2,drug3,drug4,drug5,drug6,drug7;
     private TextView day1,day2,day3,day4,day5,day6,day7;
     private Button saveButton, cancelButton;
